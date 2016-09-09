@@ -28,6 +28,10 @@ else
 EXAMPLES_DIR =
 endif
 
+EXPORT_DIR = export
+
+AUTOMAKE_OPTIONS = foreign
+
 SUBDIRS = \
 	src \
 	$(TESTS_DIR) \
@@ -35,6 +39,7 @@ SUBDIRS = \
 	app \
 	$(DOC_DIR) \
 	$(EXAMPLES_DIR) \
+	$(EXPORT_DIR) \
 	contrib
 
 dist_doc_DATA = \

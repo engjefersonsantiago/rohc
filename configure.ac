@@ -23,6 +23,12 @@
 
 AC_INIT([ROHC library], 2.1.0, [http://rohc-lib.org/],
         [rohc], [http://rohc-lib.org/])
+
+#
+AM_INIT_AUTOMAKE(jef, 0.0)
+#
+
+
 AC_CONFIG_SRCDIR([src])
 AM_CONFIG_HEADER([config.h])
 
@@ -106,6 +112,7 @@ configure_ldflags=""
 
 # Checks for programs.
 AC_PROG_CC
+AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_LIBTOOL
 
@@ -994,6 +1001,7 @@ AC_CONFIG_FILES([ \
 	test/non_regression/rfc6846/Makefile \
 	test/interop/Makefile \
 	examples/Makefile \
+	export/Makefile \
 	linux/Makefile \
 	app/Makefile \
 	app/performance/Makefile \

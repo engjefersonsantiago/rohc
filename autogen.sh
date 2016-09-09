@@ -73,6 +73,8 @@ fi
 
 # run configure with failure on compiler warnings enabled since autogen.sh
 # is for developpers not users, also enable tests, stats, doc and examples.
+	#--enable-fail-on-warning \
+	#--enable-linux-kernel-module \
 chmod +x $( dirname $0 )/configure
 $( dirname $0 )/configure \
 	--enable-rohc-debug \
@@ -84,7 +86,6 @@ $( dirname $0 )/configure \
 	--enable-rohc-tests \
 	--enable-doc \
 	--enable-examples \
-	--enable-linux-kernel-module \
 	${add_opts} \
 	$@
 
